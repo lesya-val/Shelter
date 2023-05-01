@@ -1,0 +1,114 @@
+.footer {
+	&__row {
+		@include flexbox;
+		padding-top: 40px;
+		justify-content: center;
+		column-gap: 160px;
+	}
+}
+
+.row {
+	&__information {
+		@include flexbox;
+		column-gap: 160px;
+	}
+
+	&__contacts {
+		@include flexbox;
+		flex-direction: column;
+		row-gap: 40px;
+		width: 280px;
+		padding-top: 16px;
+	}
+
+	&__locations {
+		@include flexbox;
+		flex-direction: column;
+		row-gap: 33px;
+		width: 302px;
+		padding-top: 16px;
+	}
+}
+
+.contacts {
+	&__title {
+		font-family: "Georgia";
+		font-size: 35px;
+		line-height: 130%;
+		letter-spacing: 0.06em;
+		color: $white;
+	}
+
+	&__email {
+		@include flexbox;
+		align-items: center;
+		column-gap: 20px;
+	}
+
+	&__phone {
+		@include flexbox;
+		align-items: center;
+		column-gap: 20px;
+	}
+}
+
+.email {
+	&__text {
+		font-family: "Georgia";
+		font-size: 20px;
+		letter-spacing: 0.06em;
+		color: $cream;
+		line-height: 115%;
+	}
+}
+
+.phone {
+	&__text {
+		font-family: "Georgia";
+		font-size: 20px;
+		letter-spacing: 0.06em;
+		color: $cream;
+		line-height: 115%;
+	}
+}
+
+.locations {
+	&__title {
+		font-family: "Georgia";
+		font-size: 35px;
+		line-height: 130%;
+		letter-spacing: 0.06em;
+		color: $white;
+	}
+
+	&__boston {
+		@include flexbox;
+		align-items: center;
+		column-gap: 20px;
+	}
+
+	&__london {
+		@include flexbox;
+		align-items: center;
+		column-gap: 20px;
+	}
+}
+
+.boston {
+	&__text {
+		font-family: "Georgia";
+		font-size: 20px;
+		line-height: 110%;
+		letter-spacing: 0.055em;
+		color: $cream;
+	}
+}
+
+.london {
+	&__text {
+		font-family: "Georgia";
+		font-size: 20px;
+		letter-spacing: 0.055em;
+		color: $cream;
+	}
+}

@@ -1,0 +1,336 @@
+/*** Main page ***/
+/*** Start ***/
+.start {
+	&__row {
+		@include flexbox;
+		justify-content: space-between;
+		column-gap: 42px;
+		margin-top: 90px;
+	}
+
+	&__content {
+		@include flexbox;
+		max-width: 460px;
+		align-items: flex-start;
+		flex-direction: column;
+		row-gap: 42px;
+		margin-top: 163px;
+	}
+
+	&__title {
+		max-width: 310px;
+		font-family: Georgia;
+		color: $white;
+		font-size: 44px;
+		line-height: 130%;
+	}
+
+	&__text {
+		line-height: 160%;
+		color: $grey;
+	}
+
+	&__image img {
+		max-width: 698px;
+		max-height: 728px;
+	}
+}
+
+
+/*** About ***/
+.about {
+	background-color: $white;
+
+	&__row {
+		@include flexbox;
+		justify-content: center;
+		column-gap: 120px;
+	}
+
+	&__content {
+		@include flexbox;
+		justify-content: center;
+		align-items: start;
+		flex-direction: column;
+		row-gap: 25px;
+		max-width: 430px;
+	}
+
+	&__title {
+		max-width: 370px;
+	}
+
+	&__text {
+		color: $dark-grey;
+		line-height: 160%;
+	}
+
+	&__image img {
+		max-width: 300px;
+		max-height: 408px;
+	}
+}
+
+
+/*** Our friends ***/
+.friends {
+	background-color: $light-grey;
+
+	&__column {
+		@include flexbox;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 60px;
+	}
+
+	&__title {
+		max-width: 400px;
+		text-align: center;
+	}
+}
+
+.slider {
+	@include flexbox;
+	column-gap: 53px;
+	align-items: center;
+
+	&__arrow {
+		width: 52px;
+		height: 52px;
+		border: 2px solid $cream_light;
+		border-radius: 100px;
+
+		@include anim(0.5s, 0s);
+		background: url(../image/pets/Arrow.png) center no-repeat;
+	}
+
+	&__arrow-right {
+		@include rotate(180deg);
+	}
+
+	&__arrow:hover {
+		background-color: $cream_light;
+		@include anim(0.5s, 0s);
+	}
+	
+	&__card {
+		background-color: $light;
+		width: 270px;
+		height: 435px;
+		border-radius: 0.5rem;
+
+		@include flexbox;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 30px;
+
+		padding-bottom: 30px;
+		@include anim(0.5s, 0.5s);
+
+		cursor: pointer;
+	}
+
+	&__card:hover {
+		background-color: $white;
+		@include anim(0.5s, 0.5s);
+
+		.card__button {
+			background-color: $cream;
+		}
+	}
+}
+
+.carousel {
+	@include flexbox;
+	column-gap: 90px;
+}
+
+.card {
+	&__name {
+		font-family: 'Georgia';
+		font-size: 20px;
+		letter-spacing: 0.05em;
+	}
+}
+
+
+/*** Help ***/
+.help {
+	background-color: $white;
+
+	&__content {
+		@include flexbox;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 60px;
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__list {
+		@include flexbox;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		column-gap: 120px;
+		row-gap: 55px;
+	}
+}
+
+.list {
+	&__item {
+		@include flexbox;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 30px;
+	}
+}
+
+.item {
+	&__text {
+		font-family: 'Georgia';
+		font-size: 20px;
+		text-align: center;
+		letter-spacing: 0.06em;
+		line-height: 115%;
+	}
+}
+
+
+/*** Donation ***/
+.donation {
+	background-color: $light-grey;
+
+	&__row {
+		@include flexbox;
+		justify-content: center;
+		align-items: center;
+		column-gap: 30px;
+	}
+
+	&__content {
+		@include flexbox;
+		flex-direction: column;
+		align-items: start;
+		justify-content: center;
+		row-gap: 20px;
+	}
+
+	&__title {
+		max-width: 300px;
+	}
+
+	&__subtitle {
+		font-family: 'Georgia';
+		letter-spacing: 0.06em;
+	}
+
+	&__credit-card {
+		@include flexbox;
+		justify-content: center;
+		align-items: center;
+		column-gap: 15px;
+
+		padding: 10px 15px;
+		
+		background: #F1CDB3;
+		border-radius: 9px;
+	}
+
+	&__credit-card:hover {
+		background-color: $cream_light;
+		@include anim(0.5s, 0s);
+	}
+
+	&__text {
+		font-style: italic;
+		font-size: 12px;
+		line-height: 150%;
+		color: $pale;
+		max-width: 380px;
+	}
+}
+
+.credit-card {
+	&__number {
+		font-family: 'Georgia';
+		font-size: 20px;
+		line-height: 120%;
+		letter-spacing: 0.06em;
+	}
+}
+
+
+/*** Pets page ***/
+.pets-friends {
+	&__column {
+		row-gap: 45px;
+	}
+}
+
+.pets {
+	&__list {
+		@include flexbox;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		column-gap: 40px;
+		row-gap: 30px;
+		padding: 15px 0;
+	}
+}
+
+.navigation {
+	@include flexbox;
+	justify-content: center;
+	align-items: center;
+	column-gap: 20px;
+	
+	&__button {
+		width: 52px;
+		height: 52px;
+		border-radius: 6.3rem;
+		border: 2px solid $cream;
+		@include anim(0.5s, 0s);
+		text-align: center;
+		font-family: 'Georgia';
+		font-size: 20px;
+		line-height: 115%;
+		color: $dark;
+	}
+}
+
+.active {
+	&__button {
+		background-color: $cream;
+	}
+
+	&__button:hover {
+		background-color: $cream_light;
+		border: 2px solid $cream-light;
+		@include anim(0.5s, 0s);
+	}
+}	
+
+.inactive {
+	&__button {
+		color: $grey;
+		border: 2px solid $grey;
+		cursor: default;
+	}
+	
+}
+
+.aviable {
+	&__button:hover {
+		background-color: $cream_light;
+		border: 2px solid $cream-light;
+		@include anim(0.5s, 0s);
+	}
+}
