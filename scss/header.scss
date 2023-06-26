@@ -1,146 +1,144 @@
-.header {
-	&__nav {
-		@include flexbox;
-		align-items: center;
-		justify-content: space-between;
-		padding-top: 30px;
-		column-gap: 50px; 
-	}
-}
-
-.nav {
-	@include flexbox();
-	align-items: center;
-	justify-content: center;
-
-	&__logo {
-		@include flexbox;
-		flex-direction: column;
-		row-gap: 10px;
-		align-items: center;
-	}
-
-	&__list {
-		@include flexbox;
-		column-gap: 35px;
-		align-items: center;
-		justify-content: center;
-		color: $grey;
-	}
-
-	&__list .active {
-		cursor: default;
-		color: $light;
-	}
-
-	&__item {
-		text-align: center;
-	}
-
-	&__link {
-		position: relative;
-		line-height: 160%;
-	}
-
-	&__icon {
-		display: none;
-	}
-}
-
-.menu-icon-wrapper {
-	width: 30px;
-	height: 22px;
-	@include flexbox;
-	justify-content: center;
-	align-items: center;
-	padding-top: 20px;
-}
-
-.menu-icon {
-	position: relative;
-	width: 30px;
-	height: 2px;
-	background-color: #F1CDB3;
-	top: -10px;
-}
-
-.menu-icon::before {
-	position: absolute;
-	content: '';
-	top: -10px;
-	left: 0;
-	width: 30px;
-	height: 2px;
-	background-color: #F1CDB3;
-}
-
-.menu-icon::after {
-	position: absolute;
-	content: '';
-	top: 10px;
-	left: 0;
-	width: 30px;
-	height: 2px;
-	background-color: #F1CDB3;
-}
-
-.active::after {
-	content: "";
-	position: absolute;
-	height: 3px;
-	background: $cream;
-
-	left: 0;
-	right: 10px;
-	bottom: -6px;
-	display: block;
-	width: 114px;
+.head {
+  @include flexbox;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  column-gap: 50px; 
 }
 
 .logo {
-	&__title {
-		font-family: Georgia;
-		font-size: 32px;
-		line-height: 110%;
-		letter-spacing: 0.06em;
-		color: $cream;
-	}
+  @include flexbox;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
 
-	&__subtitle {
-		color: $white;
-		font-size: 13px;
-		line-height: 15px;
-		letter-spacing: 0.1em;
-	}
+  &__title {
+    font-family: Georgia;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: $cream;
+  }
+
+  &__subtitle {
+    color: $white;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+  }
 }
 
-// Pets
-.pets-header {
-	background-color: $white;
-	padding-bottom: 30px;
+.nav {
+  @include flexbox();
+  align-items: center;
+  justify-content: center;
+
+  &__list {
+    @include flexbox;
+    column-gap: 35px;
+    align-items: center;
+    justify-content: center;
+    color: $grey;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    position: relative;
+    line-height: 160%;
+  }
+
+  &__link--active {
+    cursor: default;
+    color: $light;
+  }
+
+  &__link--active::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background: $cream;
+
+    left: 0;
+    right: 10px;
+    bottom: -6px;
+    display: block;
+    width: 114px;
+  }
 }
 
-.pets-logo {
+// Menu-burger
+.icon {
+  display: none;
 
-	&__title {
-		color: $color;
-	}
+  &__wrapper {
+    width: 30px;
+    height: 22px;
+    @include flexbox;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
 
-	&__subtitle {
-		color: $dark;
-	}
+  &__menu {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: #F1CDB3;
+    top: -10px;
+  }
+  
+  &__menu::before {
+    position: absolute;
+    content: '';
+    top: -10px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #F1CDB3;
+  }
+  
+  &__menu::after {
+    position: absolute;
+    content: '';
+    top: 10px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #F1CDB3;
+  }
 }
 
-.pets-nav {
-	&__list {
-		color: $color;
-	}
-
-	&__list .active {
-		color: $dark;
-	}
+/*** Pets page ***/
+.header {
+  &-pets {
+    background-color: $white;
+    padding-bottom: 30px;
+  }
 }
 
-.pets-active::after {
-	width: 58px;
+.logo {
+  &__title--pets {
+    color: $color;
+  }
+
+  &__subtitle--pets {
+    color: $dark;
+  }
+}
+
+.nav {
+  &__list--pets {
+    color: $color;
+  }
+
+  &__link--active-pets {
+    color: $dark;
+  }
+
+  &__link--active-pets::after {
+    width: 58px;
+  }
 }

@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
-.header__nav {
+.head {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -86,89 +86,12 @@ h1, h2, h3, h4, h5, h6 {
        column-gap: 50px;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.nav__logo {
+.logo {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
   align-items: center;
 }
-.nav__list {
-  display: flex;
-  -moz-column-gap: 35px;
-       column-gap: 35px;
-  align-items: center;
-  justify-content: center;
-  color: #CDCDCD;
-}
-.nav__list .active {
-  cursor: default;
-  color: #FAFAFA;
-}
-.nav__item {
-  text-align: center;
-}
-.nav__link {
-  position: relative;
-  line-height: 160%;
-}
-.nav__icon {
-  display: none;
-}
-
-.menu-icon-wrapper {
-  width: 30px;
-  height: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 20px;
-}
-
-.menu-icon {
-  position: relative;
-  width: 30px;
-  height: 2px;
-  background-color: #F1CDB3;
-  top: -10px;
-}
-
-.menu-icon::before {
-  position: absolute;
-  content: "";
-  top: -10px;
-  left: 0;
-  width: 30px;
-  height: 2px;
-  background-color: #F1CDB3;
-}
-
-.menu-icon::after {
-  position: absolute;
-  content: "";
-  top: 10px;
-  left: 0;
-  width: 30px;
-  height: 2px;
-  background-color: #F1CDB3;
-}
-
-.active::after {
-  content: "";
-  position: absolute;
-  height: 3px;
-  background: #F1CDB3;
-  left: 0;
-  right: 10px;
-  bottom: -6px;
-  display: block;
-  width: 114px;
-}
-
 .logo__title {
   font-family: Georgia;
   font-size: 32px;
@@ -183,26 +106,98 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.1em;
 }
 
-.pets-header {
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__list {
+  display: flex;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  align-items: center;
+  justify-content: center;
+  color: #CDCDCD;
+}
+.nav__item {
+  text-align: center;
+}
+.nav__link {
+  position: relative;
+  line-height: 160%;
+}
+.nav__link--active {
+  cursor: default;
+  color: #FAFAFA;
+}
+.nav__link--active::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background: #F1CDB3;
+  left: 0;
+  right: 10px;
+  bottom: -6px;
+  display: block;
+  width: 114px;
+}
+
+.icon {
+  display: none;
+}
+.icon__wrapper {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.icon__menu {
+  position: relative;
+  width: 30px;
+  height: 2px;
+  background-color: #F1CDB3;
+  top: -10px;
+}
+.icon__menu::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #F1CDB3;
+}
+.icon__menu::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #F1CDB3;
+}
+
+.header-pets {
   background-color: #FFFFFF;
   padding-bottom: 30px;
 }
 
-.pets-logo__title {
+.logo__title--pets {
   color: #545454;
 }
-.pets-logo__subtitle {
+.logo__subtitle--pets {
   color: #292929;
 }
 
-.pets-nav__list {
+.nav__list--pets {
   color: #545454;
 }
-.pets-nav__list .active {
+.nav__link--active-pets {
   color: #292929;
 }
-
-.pets-active::after {
+.nav__link--active-pets::after {
   width: 58px;
 }
 
@@ -637,20 +632,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s ease 0s;
 }
 
-.hover-link__light {
+.nav__link--hover-light, .nav__link--hover-dark {
   transition: all 0.5s ease 0s;
 }
-
-.hover-link__light:hover {
+.nav__link--hover-light:hover {
   color: #FAFAFA;
   transition: all 0.5s ease 0s;
 }
-
-.hover-link__dark {
-  transition: all 0.5s ease 0s;
-}
-
-.hover-link__dark:hover {
+.nav__link--hover-dark:hover {
   color: #292929;
   transition: all 0.5s ease 0s;
 }
@@ -765,13 +754,13 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 10px;
   }
   /*** Header ***/
-  .header__nav {
+  .head {
     padding: 30px 10px 0;
   }
   .nav {
     display: none;
   }
-  .nav__icon {
+  .icon {
     display: block;
     background-color: transparent;
   }
@@ -966,19 +955,16 @@ h1, h2, h3, h4, h5, h6 {
   }
   /*** Pets page ***/
   /*** Header ***/
-  .menu-icon-black {
+  .icon__menu-black {
     background-color: #000000;
   }
-  .menu-icon-black::before {
+  .icon__menu-black::before, .icon__menu-black::after {
     background-color: #000000;
   }
-  .menu-icon-black::after {
-    background-color: #000000;
-  }
-  .pets-header {
+  .header-pets {
     padding-bottom: 0;
   }
-  .pets-header__nav {
+  .head--pets {
     padding: 30px 10px;
   }
   /*** Pets ***/
