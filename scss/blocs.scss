@@ -19,7 +19,7 @@
 
 	&__title {
 		max-width: 310px;
-		font-family: Georgia;
+		font-family: 'Georgia';
 		color: $white;
 		font-size: 44px;
 		line-height: 130%;
@@ -35,7 +35,6 @@
 		max-height: 728px;
 	}
 }
-
 
 /*** About ***/
 .about {
@@ -70,7 +69,6 @@
 		max-height: 408px;
 	}
 }
-
 
 /*** Our friends ***/
 .friends {
@@ -113,8 +111,14 @@
 		background-color: $cream_light;
 		@include anim(0.5s, 0s);
 	}
-	
-	&__card {
+}
+
+.carousel {
+	@include flexbox;
+	column-gap: 90px;
+}
+
+.card {
 		background-color: $light;
 		width: 270px;
 		height: 435px;
@@ -128,33 +132,23 @@
 
 		padding-bottom: 30px;
 		@include anim(0.5s, 0.5s);
-
 		cursor: pointer;
-	}
 
-	&__card:hover {
-		background-color: $white;
-		@include anim(0.5s, 0.5s);
-
-		.card__button {
-			background-color: $cream;
+		&__name {
+			font-family: 'Georgia';
+			font-size: 20px;
+			letter-spacing: 0.05em;
 		}
+}
+
+.card:hover {
+	background-color: $white;
+	@include anim(0.5s, 0.5s);
+
+	.card__button {
+		background-color: $cream;
 	}
 }
-
-.carousel {
-	@include flexbox;
-	column-gap: 90px;
-}
-
-.card {
-	&__name {
-		font-family: 'Georgia';
-		font-size: 20px;
-		letter-spacing: 0.05em;
-	}
-}
-
 
 /*** Help ***/
 .help {
@@ -190,10 +184,8 @@
 		justify-content: center;
 		row-gap: 30px;
 	}
-}
 
-.item {
-	&__text {
+	&__item-text {
 		font-family: 'Georgia';
 		font-size: 20px;
 		text-align: center;
@@ -201,7 +193,6 @@
 		line-height: 115%;
 	}
 }
-
 
 /*** Donation ***/
 .donation {
@@ -266,16 +257,15 @@
 	}
 }
 
-
 /*** Pets page ***/
-.pets-friends {
-	&__column {
+.friends {
+	&__column--pets {
 		row-gap: 45px;
 	}
 }
 
-.pets {
-	&__list {
+.list {
+	&--pets {
 		@include flexbox;
 		justify-content: center;
 		align-items: center;
@@ -303,34 +293,5 @@
 		font-size: 20px;
 		line-height: 115%;
 		color: $dark;
-	}
-}
-
-.active {
-	&__button {
-		background-color: $cream;
-	}
-
-	&__button:hover {
-		background-color: $cream_light;
-		border: 2px solid $cream-light;
-		@include anim(0.5s, 0s);
-	}
-}	
-
-.inactive {
-	&__button {
-		color: $grey;
-		border: 2px solid $grey;
-		cursor: default;
-	}
-	
-}
-
-.aviable {
-	&__button:hover {
-		background-color: $cream_light;
-		border: 2px solid $cream-light;
-		@include anim(0.5s, 0s);
 	}
 }

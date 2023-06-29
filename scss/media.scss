@@ -110,8 +110,8 @@
     }
   }
 
-  .pets {
-    &__list {
+  .list {
+    &--pets {
       margin-bottom: 10px;
       padding: 0;
     }
@@ -277,17 +277,15 @@
       width: 130px;
       height: 87px;
     }
-  }
 
-  .item {
-    &__text {
-      font-size: 15px;
-    }
-    
-    &__icon img {
-      width: 50px;
+		&__item-icon {
+			width: 50px;
       height: 50px;
-    }
+		}
+
+		&__item-text {
+			font-size: 15px;
+		}
   }
 
   /*** Donation ***/
@@ -408,7 +406,6 @@
   }
   
   /*** Pets page ***/
-
   /*** Header ***/
   .icon {
     &__menu-black {
@@ -421,33 +418,37 @@
     }
   }
 
-  .header-pets {
-    padding-bottom: 0;
+  .header {
+		&--pets {
+			padding-bottom: 0;
+		}
   }
 
-  .head--pets {
-    padding: 30px 10px;
+  .head {
+		&--pets {
+			padding: 30px 10px;
+		}
   }
 
   /*** Pets ***/
-  .pets-friends {
-    &__column {
+  .friends {
+    &__column--pets {
       padding-bottom: 40px;
     }
   }
 
-  .pets {
-    &__list {
-      row-gap: 30px;
+  .list {
+		&--pets {
+			row-gap: 30px;
       margin-bottom: 0;
+			}
     }
-  }
 
-  .pets-slider {
-    &__card {
-      margin-bottom: 0;
-    }
-  }
+	.card {
+		&--pets {
+			margin-bottom: 0;
+		}
+	}
 
   .navigation {
     column-gap: 10px;

@@ -13,7 +13,7 @@
   align-items: center;
 
   &__title {
-    font-family: Georgia;
+    font-family: 'Georgia';
     font-size: 32px;
     line-height: 110%;
     letter-spacing: 0.06em;
@@ -113,7 +113,7 @@
 
 /*** Pets page ***/
 .header {
-  &-pets {
+  &--pets {
     background-color: $white;
     padding-bottom: 30px;
   }

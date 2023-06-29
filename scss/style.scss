@@ -60,38 +60,47 @@ $black: #000000;
   background: $cream;
   border-radius: 100px;
 
-  font-family: "Georgia";
+  font-family: 'Georgia';
   font-size: 17px;
   letter-spacing: 0.06em;
   color: $dark;
 
   @include anim(0.5s, 0s);
+
+	&-border {
+		background-color: transparent;
+		border: 2px solid $cream;
+	}
+
+	&-border:hover {
+		background-color: $cream;
+	}
+
+	&--active {
+		background-color: $cream;
+	}
+
+	&--active:hover {
+		background-color: $cream_light;
+		border: 2px solid $cream-light;
+		@include anim(0.5s, 0s);
+	}
+
+	&--inactive {
+		color: $grey;
+		border: 2px solid $grey;
+		cursor: default;
+	}
+
+	&--aviable:hover {
+		background-color: $cream_light;
+		border: 2px solid $cream-light;
+		@include anim(0.5s, 0s);
+	}
 }
 
 .button:hover {
   background-color: $cream_light;
-  @include anim(0.5s, 0s);
-}
-
-.button__border {
-  display: inline-block;
-  background-color: transparent;
-  border: 2px solid $cream;
-  border-radius: 100px;
-  padding: 15px 45px;
-
-
-  font-family: Georgia;
-  font-size: 17px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  color: $dark;
-
-  @include anim(0.5s, 0s);
-}
-
-.button__border:hover {
-  background-color: $cream;
   @include anim(0.5s, 0s);
 }
 

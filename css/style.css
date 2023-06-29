@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 .logo__title {
-  font-family: Georgia;
+  font-family: "Georgia";
   font-size: 32px;
   line-height: 110%;
   letter-spacing: 0.06em;
@@ -179,7 +179,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #F1CDB3;
 }
 
-.header-pets {
+/*** Pets page ***/
+.header--pets {
   background-color: #FFFFFF;
   padding-bottom: 30px;
 }
@@ -220,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .start__title {
   max-width: 310px;
-  font-family: Georgia;
+  font-family: "Georgia";
   color: #FFFFFF;
   font-size: 44px;
   line-height: 130%;
@@ -301,7 +302,14 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #FDDCC4;
   transition: all 0.5s ease 0s;
 }
-.slider__card {
+
+.carousel {
+  display: flex;
+  -moz-column-gap: 90px;
+       column-gap: 90px;
+}
+
+.card {
   background-color: #FAFAFA;
   width: 270px;
   height: 435px;
@@ -315,24 +323,18 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s ease 0.5s;
   cursor: pointer;
 }
-.slider__card:hover {
-  background-color: #FFFFFF;
-  transition: all 0.5s ease 0.5s;
-}
-.slider__card:hover .card__button {
-  background-color: #F1CDB3;
-}
-
-.carousel {
-  display: flex;
-  -moz-column-gap: 90px;
-       column-gap: 90px;
-}
-
 .card__name {
   font-family: "Georgia";
   font-size: 20px;
   letter-spacing: 0.05em;
+}
+
+.card:hover {
+  background-color: #FFFFFF;
+  transition: all 0.5s ease 0.5s;
+}
+.card:hover .card__button {
+  background-color: #F1CDB3;
 }
 
 /*** Help ***/
@@ -366,8 +368,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   row-gap: 30px;
 }
-
-.item__text {
+.list__item-text {
   font-family: "Georgia";
   font-size: 20px;
   text-align: center;
@@ -430,11 +431,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*** Pets page ***/
-.pets-friends__column {
+.friends__column--pets {
   row-gap: 45px;
 }
 
-.pets__list {
+.list--pets {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -463,27 +464,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   line-height: 115%;
   color: #292929;
-}
-
-.active__button {
-  background-color: #F1CDB3;
-}
-.active__button:hover {
-  background-color: #FDDCC4;
-  border: 2px solid #FDDCC4;
-  transition: all 0.5s ease 0s;
-}
-
-.inactive__button {
-  color: #CDCDCD;
-  border: 2px solid #CDCDCD;
-  cursor: default;
-}
-
-.aviable__button:hover {
-  background-color: #FDDCC4;
-  border: 2px solid #FDDCC4;
-  transition: all 0.5s ease 0s;
 }
 
 .footer__row {
@@ -607,28 +587,34 @@ h1, h2, h3, h4, h5, h6 {
   color: #292929;
   transition: all 0.5s ease 0s;
 }
+.button-border {
+  background-color: transparent;
+  border: 2px solid #F1CDB3;
+}
+.button-border:hover {
+  background-color: #F1CDB3;
+}
+.button--active {
+  background-color: #F1CDB3;
+}
+.button--active:hover {
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+  transition: all 0.5s ease 0s;
+}
+.button--inactive {
+  color: #CDCDCD;
+  border: 2px solid #CDCDCD;
+  cursor: default;
+}
+.button--aviable:hover {
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+  transition: all 0.5s ease 0s;
+}
 
 .button:hover {
   background-color: #FDDCC4;
-  transition: all 0.5s ease 0s;
-}
-
-.button__border {
-  display: inline-block;
-  background-color: transparent;
-  border: 2px solid #F1CDB3;
-  border-radius: 100px;
-  padding: 15px 45px;
-  font-family: Georgia;
-  font-size: 17px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  color: #292929;
-  transition: all 0.5s ease 0s;
-}
-
-.button__border:hover {
-  background-color: #F1CDB3;
   transition: all 0.5s ease 0s;
 }
 
@@ -865,12 +851,12 @@ h1, h2, h3, h4, h5, h6 {
     width: 130px;
     height: 87px;
   }
-  .item__text {
-    font-size: 15px;
-  }
-  .item__icon img {
+  .list__item-icon {
     width: 50px;
     height: 50px;
+  }
+  .list__item-text {
+    font-size: 15px;
   }
   /*** Donation ***/
   .donation__row {
@@ -961,21 +947,21 @@ h1, h2, h3, h4, h5, h6 {
   .icon__menu-black::before, .icon__menu-black::after {
     background-color: #000000;
   }
-  .header-pets {
+  .header--pets {
     padding-bottom: 0;
   }
   .head--pets {
     padding: 30px 10px;
   }
   /*** Pets ***/
-  .pets-friends__column {
+  .friends__column--pets {
     padding-bottom: 40px;
   }
-  .pets__list {
+  .list--pets {
     row-gap: 30px;
     margin-bottom: 0;
   }
-  .pets-slider__card {
+  .card--pets {
     margin-bottom: 0;
   }
   .navigation {
