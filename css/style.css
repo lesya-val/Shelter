@@ -360,15 +360,14 @@ h1, h2, h3, h4, h5, h6 {
        column-gap: 120px;
   row-gap: 55px;
 }
-
-.list__item {
+.help__list-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   row-gap: 30px;
 }
-.list__item-text {
+.help__list-text {
   font-family: "Georgia";
   font-size: 20px;
   text-align: center;
@@ -691,7 +690,7 @@ h1, h2, h3, h4, h5, h6 {
     -moz-column-gap: 60px;
          column-gap: 60px;
   }
-  .list__item {
+  .help__list-item {
     width: 170px;
     height: 113px;
   }
@@ -723,7 +722,7 @@ h1, h2, h3, h4, h5, h6 {
     row-gap: 30px;
     padding-bottom: 76px;
   }
-  .pets__list {
+  .list--pets {
     margin-bottom: 10px;
     padding: 0;
   }
@@ -846,16 +845,16 @@ h1, h2, h3, h4, h5, h6 {
          column-gap: 30px;
     row-gap: 30px;
   }
-  .list__item {
+  .help__list-item {
     row-gap: 20px;
     width: 130px;
     height: 87px;
   }
-  .list__item-icon {
+  .help__list-icon {
     width: 50px;
     height: 50px;
   }
-  .list__item-text {
+  .help__list-text {
     font-size: 15px;
   }
   /*** Donation ***/
