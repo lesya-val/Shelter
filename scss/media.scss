@@ -59,12 +59,12 @@
     &__list {
       column-gap: 60px;
     }
-
-		&__list-item {
-			width: 170px;
-      height: 113px;
-		}
   }
+
+	.item {
+		width: 170px;
+		height: 113px;
+	}
 
   /*** Donation ***/
   .donation {
@@ -85,10 +85,8 @@
   }
   
   .row {
-    &__information {
-      column-gap: 3.8rem;
-    }
-  
+		column-gap: 3.8rem;
+		
     &__contacts {
       row-gap: 2.5rem;
       padding-top: 0;
@@ -99,7 +97,6 @@
     }
   }
   
-
   /*** Pets page ***/
   .pets-friends {
     &__column {
@@ -260,29 +257,29 @@
     &__title {
       font-size: 25px;
     }
-  
-    &__list {
-      margin: 0 5px;
-      justify-content: flex-start;
-      column-gap: 30px;
-      row-gap: 30px;
-    }
+  }
 
-		&__list-item {
-			row-gap: 20px;
-      width: 130px;
-      height: 87px;
-		}
+	.list {
+		margin: 0 5px;
+		justify-content: flex-start;
+		column-gap: 30px;
+		row-gap: 30px;
+	}
 
-		&__list-icon {
+	.item {
+		row-gap: 20px;
+		width: 130px;
+		height: 87px;
+
+		&__icon {
 			width: 50px;
       height: 50px;
 		}
-
-		&__list-text {
+	
+		&__text {
 			font-size: 15px;
 		}
-  }
+	}
 
   /*** Donation ***/
   .donation {
@@ -329,16 +326,19 @@
       padding-top: 30px;
       row-gap: 40px;
     }
+
+		&__row-image img {
+			max-width: 260px;
+			min-height: 270px;
+		}
   }
   
   .row {
-    &__information {
-      @include flexbox;
-      flex-direction: column;
-      row-gap: 40px;
-      text-align: center;
-      align-items: center;
-    }
+		@include flexbox;
+		flex-direction: column;
+		row-gap: 40px;
+		text-align: center;
+		align-items: center;
   
     &__contacts {
       row-gap: 40px;
@@ -349,11 +349,6 @@
   
     &__locations {
       row-gap: 40px;
-    }
-
-    &__image img{
-      max-width: 260px;
-      min-height: 270px;
     }
   }
   
@@ -370,17 +365,11 @@
       margin-left: 28px;
       line-height: 120%;
     }
-  
-    &__boston {
-      text-align: left;
-    }
-  
-    &__london {
-      text-align: left;
-    }
   }
 
   .boston {
+		text-align: left;
+
     &__icon {
       margin-left: 3px;
     }
@@ -392,6 +381,8 @@
   }
 
   .london {
+		text-align: left;
+
     &__icon {
       margin-left: 3px;
     }

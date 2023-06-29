@@ -8,17 +8,23 @@
 }
 
 .row {
-	&__information {
-		@include flexbox;
-		column-gap: 160px;
-	}
-
+	@include flexbox;
+	column-gap: 160px;
+	
 	&__contacts {
 		@include flexbox;
 		flex-direction: column;
 		row-gap: 40px;
 		width: 280px;
 		padding-top: 16px;
+	}
+
+	&__contacts-title {
+		font-family: 'Georgia';
+		font-size: 35px;
+		line-height: 130%;
+		letter-spacing: 0.06em;
+		color: $white;
 	}
 
 	&__locations {
@@ -28,31 +34,21 @@
 		width: 302px;
 		padding-top: 16px;
 	}
-}
 
-.contacts {
-	&__title {
+	&__locations-title {
 		font-family: 'Georgia';
 		font-size: 35px;
 		line-height: 130%;
 		letter-spacing: 0.06em;
 		color: $white;
 	}
-
-	&__email {
-		@include flexbox;
-		align-items: center;
-		column-gap: 20px;
-	}
-
-	&__phone {
-		@include flexbox;
-		align-items: center;
-		column-gap: 20px;
-	}
 }
 
 .email {
+	@include flexbox;
+		align-items: center;
+		column-gap: 20px;
+
 	&__text {
 		font-family: 'Georgia';
 		font-size: 20px;
@@ -63,6 +59,10 @@
 }
 
 .phone {
+	@include flexbox;
+	align-items: center;
+	column-gap: 20px;
+
 	&__text {
 		font-family: 'Georgia';
 		font-size: 20px;
@@ -72,29 +72,11 @@
 	}
 }
 
-.locations {
-	&__title {
-		font-family: 'Georgia';
-		font-size: 35px;
-		line-height: 130%;
-		letter-spacing: 0.06em;
-		color: $white;
-	}
-
-	&__boston {
-		@include flexbox;
-		align-items: center;
-		column-gap: 20px;
-	}
-
-	&__london {
-		@include flexbox;
-		align-items: center;
-		column-gap: 20px;
-	}
-}
-
 .boston {
+	@include flexbox;
+		align-items: center;
+		column-gap: 20px;
+
 	&__text {
 		font-family: 'Georgia';
 		font-size: 20px;
@@ -105,6 +87,10 @@
 }
 
 .london {
+	@include flexbox;
+		align-items: center;
+		column-gap: 20px;
+
 	&__text {
 		font-family: 'Georgia';
 		font-size: 20px;

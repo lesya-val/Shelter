@@ -351,7 +351,8 @@ h1, h2, h3, h4, h5, h6 {
 .help__title {
   text-align: center;
 }
-.help__list {
+
+.list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -360,14 +361,15 @@ h1, h2, h3, h4, h5, h6 {
        column-gap: 120px;
   row-gap: 55px;
 }
-.help__list-item {
+
+.item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   row-gap: 30px;
 }
-.help__list-text {
+.item__text {
   font-family: "Georgia";
   font-size: 20px;
   text-align: center;
@@ -473,7 +475,7 @@ h1, h2, h3, h4, h5, h6 {
        column-gap: 160px;
 }
 
-.row__information {
+.row {
   display: flex;
   -moz-column-gap: 160px;
        column-gap: 160px;
@@ -485,6 +487,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 280px;
   padding-top: 16px;
 }
+.row__contacts-title {
+  font-family: "Georgia";
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
 .row__locations {
   display: flex;
   flex-direction: column;
@@ -492,27 +501,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 302px;
   padding-top: 16px;
 }
-
-.contacts__title {
+.row__locations-title {
   font-family: "Georgia";
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #FFFFFF;
 }
-.contacts__email {
-  display: flex;
-  align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
-.contacts__phone {
-  display: flex;
-  align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
 
+.email {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
 .email__text {
   font-family: "Georgia";
   font-size: 20px;
@@ -521,6 +523,12 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 115%;
 }
 
+.phone {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
 .phone__text {
   font-family: "Georgia";
   font-size: 20px;
@@ -529,26 +537,12 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 115%;
 }
 
-.locations__title {
-  font-family: "Georgia";
-  font-size: 35px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  color: #FFFFFF;
-}
-.locations__boston {
+.boston {
   display: flex;
   align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
-.locations__london {
-  display: flex;
-  align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
-
 .boston__text {
   font-family: "Georgia";
   font-size: 20px;
@@ -557,6 +551,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #F1CDB3;
 }
 
+.london {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
 .london__text {
   font-family: "Georgia";
   font-size: 20px;
@@ -690,7 +690,7 @@ h1, h2, h3, h4, h5, h6 {
     -moz-column-gap: 60px;
          column-gap: 60px;
   }
-  .help__list-item {
+  .item {
     width: 170px;
     height: 113px;
   }
@@ -706,7 +706,7 @@ h1, h2, h3, h4, h5, h6 {
     row-gap: 4rem;
     padding-top: 30px;
   }
-  .row__information {
+  .row {
     -moz-column-gap: 3.8rem;
          column-gap: 3.8rem;
   }
@@ -838,23 +838,23 @@ h1, h2, h3, h4, h5, h6 {
   .help__title {
     font-size: 25px;
   }
-  .help__list {
+  .list {
     margin: 0 5px;
     justify-content: flex-start;
     -moz-column-gap: 30px;
          column-gap: 30px;
     row-gap: 30px;
   }
-  .help__list-item {
+  .item {
     row-gap: 20px;
     width: 130px;
     height: 87px;
   }
-  .help__list-icon {
+  .item__icon {
     width: 50px;
     height: 50px;
   }
-  .help__list-text {
+  .item__text {
     font-size: 15px;
   }
   /*** Donation ***/
@@ -890,7 +890,11 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 30px;
     row-gap: 40px;
   }
-  .row__information {
+  .footer__row-image img {
+    max-width: 260px;
+    min-height: 270px;
+  }
+  .row {
     display: flex;
     flex-direction: column;
     row-gap: 40px;
@@ -906,10 +910,6 @@ h1, h2, h3, h4, h5, h6 {
   .row__locations {
     row-gap: 40px;
   }
-  .row__image img {
-    max-width: 260px;
-    min-height: 270px;
-  }
   .contacts__title {
     font-size: 25px;
   }
@@ -919,10 +919,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 28px;
     line-height: 120%;
   }
-  .locations__boston {
-    text-align: left;
-  }
-  .locations__london {
+  .boston {
     text-align: left;
   }
   .boston__icon {
@@ -931,6 +928,9 @@ h1, h2, h3, h4, h5, h6 {
   .boston__text {
     letter-spacing: 0.06em;
     line-height: 115%;
+  }
+  .london {
+    text-align: left;
   }
   .london__icon {
     margin-left: 3px;
