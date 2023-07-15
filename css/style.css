@@ -130,16 +130,18 @@ h1, h2, h3, h4, h5, h6 {
   cursor: default;
   color: #FAFAFA;
 }
-.nav__link--active::after {
+.nav .nav__link--active {
+  position: relative;
+}
+.nav .nav__link--active::after {
   content: "";
   position: absolute;
   height: 3px;
   background: #F1CDB3;
   left: 0;
-  right: 10px;
+  right: 0;
   bottom: -6px;
   display: block;
-  width: 114px;
 }
 
 .icon {
@@ -564,6 +566,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #F1CDB3;
 }
 
+.lock {
+  overflow: hidden;
+}
+
 .container__page {
   padding: 80px 0 100px;
 }
@@ -743,11 +749,34 @@ h1, h2, h3, h4, h5, h6 {
     padding: 30px 10px 0;
   }
   .nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #292929;
+    overflow: auto;
+    transition: all 0.5s ease 0s;
+    right: -100%;
+  }
+  .nav--active {
+    right: 0;
+  }
+  .nav__list {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .nav__item {
+    font-size: 32px;
   }
   .icon {
     display: block;
     background-color: transparent;
+    transition: all 0.5s ease 0s;
+  }
+  .icon--active {
+    transform: rotate(90deg);
+    transition: all 0.5s ease 0s;
   }
   /*** Start ***/
   .start__row {
@@ -951,6 +980,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .head--pets {
     padding: 30px 10px;
+  }
+  .nav--pets {
+    background-color: #F6F6F6;
   }
   /*** Pets ***/
   .friends__column--pets {

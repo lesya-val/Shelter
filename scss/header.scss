@@ -55,18 +55,20 @@
     color: $light;
   }
 
-  &__link--active::after {
+	.nav__link--active {
+		position: relative;
+	}
+
+  .nav__link--active::after {
     content: "";
     position: absolute;
     height: 3px;
     background: $cream;
-
     left: 0;
-    right: 10px;
+    right: 0;
     bottom: -6px;
     display: block;
-    width: 114px;
-  }
+}
 }
 
 // Menu-burger
